@@ -8,11 +8,13 @@ const EventPage = () => {
   return (
     <div className="portal-wrapper">
       <Nav />
+      <div className="main-wrapper">
       <Header />
       <main>
         <EventList />
       </main>
       <Footer />
+      </div>
     </div>
   );
 };

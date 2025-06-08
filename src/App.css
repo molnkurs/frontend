@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box
+}
+
+/* ===============================
+   Global Design Tokens (Colors)
+   =============================== */
+:root {
+  /* Primary */
+  --primary-100: #F26CF9;
+  --primary-90:  #F589FA;
+  --primary-50:  #FCD3FE;
+  --primary-40:  #FCE2FE;
+  --primary-30:  #FDEDFE;
+
+  /* Secondary */
+  --secondary-110: #1C2346;
+  --secondary-100: #37437D;
+  --secondary-90:  #5562A2;
+  --secondary-70:  #707DBF;
+  --secondary-60:  #ABB4DD;
+  --secondary-50:  #D3DAF9;
+
+  /* Yellow */
+  --yellow-100: #FFCA39;
+  --yellow-90:  #FFEFC3;
+
+  /* Grey */
+  --grey-10:  #FFFFFF;
+  --grey-20:  #F7F7F7;
+  --grey-30:  #EDEDED;
+  --grey-40:  #E0E0E1;
+  --grey-50:  #C3C3C4;
+  --grey-60:  #9F9FA1;
+  --grey-70:  #777779;
+  --grey-80:  #636365;
+  --grey-90:  #434345;
+  --grey-100: #1E1E20;
+
+  /* Cool Grey */
+  --cool-grey-10:  #EEEFFF;
+  --cool-grey-20:  #E4E5F5;
+  --cool-grey-30:  #DDDEED;
+  --cool-grey-40:  #D1D2E0;
+  --cool-grey-50:  #B0B1BD;
+  --cool-grey-60:  #8F8F99;
+  --cool-grey-70:  #72737A;
+  --cool-grey-80:  #56565C;
+  --cool-grey-90:  #39393D;
+  --cool-grey-100: #131314;
+}
+
+/* ===============================
+   Base Styling
+   =============================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--grey-10);
+  color: var(--grey-100);
+  padding: 1rem;
+}
+
+/* ===============================
+   Typography
+   =============================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--grey-100);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--grey-90);
+}
+
+a {
+  color: var(--gray-90);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   Buttons
+   =============================== */
+
+button {
+  font-family: inherit;
+  background-color: var(--primary-100);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--primary-90);
+}
+
+html {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  @media (width >=768) {
+    width: 720px;
+  }
+
+  @media (width >=992) {
+    width: 960px;
+  }
+
+  @media (width >=1200) {
+    width: 1140px;
+  }
+
+  @media (width >=1400) {
+    width: 1320px;
+  }
+}
+
+.header {
+  font-size: 24px;
+  background-color: var(--cool-grey-10);
+  color: var(--secondary-100);
+
+  padding: .5rem;
+  border-radius: 5px;
+}
+.fotter {
+  color: var(--cool-grey-50);
+  background-color: var(--cool-grey-10);
+  padding: .5rem;
+  border-radius: 5px;
+}
+
+.portal-wrapper {
+  display: grid;
+  grid-template-columns: 200px auto;
+  height: 100dvh;
+}
+.main-wrapper {
+  display: grid;
+  grid-template-rows: 50px auto 50px;
+  height: 100dvh;
+}
+.sidebar {
+  background-color: var(--secondary-50) ;
+  padding: .5rem;
+  border-radius: 5px;
+  margin-right: .5rem;
+  
+}
+.event-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--cool-grey-10);
+  padding: 1rem;
+  margin-top: .5rem;
+  border-radius: 5px;
+}
+.event-details {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: var(--cool-grey-10);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.event-details h1 {
+  font-size: 2rem;
+  color: var(--secondary-110);
+  margin-bottom: 0.5rem;
+}
+
+.event-details h6 {
+  font-size: 0.9rem;
+  color: var(--grey-70);
+  margin-bottom: 1rem;
+}
+
+.event-details div {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--grey-90);
+}
+
+.event-details button {
+  background-color: var(--primary-100);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.event-details button:hover {
+  background-color: var(--primary-90);
+}
+
+
+
+.bookevent {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--cool-grey-10);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.bookevent h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--secondary-110);
+}
+
+.bookevent form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.bookevent label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--grey-90);
+}
+
+.bookevent input {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid var(--grey-40);
+  border-radius: 4px;
+  background-color: white;
+  transition: border-color 0.2s;
+}
+
+.bookevent input:focus {
+  outline: none;
+  border-color: var(--primary-100);
+  box-shadow: 0 0 0 2px rgba(242, 108, 249, 0.2);
+}
+
+.bookevent button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--primary-100);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.bookevent button:hover {
+  background-color: var(--primary-90);
+}

@@ -26,13 +26,13 @@ const EventDetailsPage = () => {
       <h1>
         {event.title}
       </h1>
-      <h6>({event.id})</h6>
       <div>{event.description}</div>
       <div>{event.location}</div>
       <div>{event.date}</div>
       <div>
         <Link to={`/events/booking/${id}`}>
-        book
+        <button>book</button>
+        
         </Link>
       </div>
     </div>
